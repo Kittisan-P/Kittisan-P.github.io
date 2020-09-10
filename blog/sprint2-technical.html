@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Slab:wght@200;300;400;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <meta name="description" content="A blog of Kittisan Puangkum, a web developer from Auckland, New Zealand." />
+  <link rel="stylesheet" href="../styles/main.css">
+
+  </head>
+  <!-- Header starts here -->
+      <header>
+            <div id="title-logo" class="row">
+              <div class="col-md-12 text-center">
+                <h1>Kittisan P.</h1>
+              </div>
+            </div>
+            <div id="title-blog" class="row">
+              <div class="col-md-12 text-center">
+                <h2>My Blog of learning!<br>
+                </h2>
+              </div>
+            </div>
+            <!-- Menu bar starts here -->
+            <div id="menu" class="row">
+              <nav class="col-md-12 text-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">TRAVEL BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">CONTACT ME</a>
+                    </li>
+                  </ul>
+             </nav>
+            </div><!-- Menu bar ends here -->
+         </header><!-- Header ends here -->
+  <body>
+
+    <!-- Container starts here -->
+    <div class="container-fluid">
+
+      <div id="container" class="row">
+        <div class="col-md-12 text-left">
+          <h2 class="sprint"><span></span>What does it mean to display inline vs inline blocks?</h2>
+          <h3><strong>CSS Display And The Basic Box Model.</strong></h3>
+          <p>This article aims at clearing up some of the misconceptions about the CSS display property and the way it affects the box model. It will only take into account the W3 specifications. To avoid blurring you with all sorts of details and exceptions, various browser inconsistencies will be swept and kept under the rug. The purpose is to give you a clear understanding of the matter, so that you shouldn’t be afraid of doing more than changing colors from a stylesheet picked up from who knows what source.</p>
+
+          <p><strong>Block Or Inline?</strong></p>
+          <p>HTML elements can be displayed in two very distinct ways: inline or block. There are many differences between them, but the most important is that inlines flow one after another horizontally, until they have reached the end of the line, at which point they continue to flow on the next line. Blocks on the other hand flow one after the another vertically, and each of them basically occupies an entire line. HTML shows flexibility in allowing elements to flow and this is one of its benefits, as you can insert content in the page at any point and the entire page will rearrange itself to accommodate the changes.</p>
+     
+          <p>The term flow, or formatting context, refers to the space occupied by inlines or blocks. Each formatting context is responsible for the rendition of its components and it does so according to the principles described above:
+        
+            <ul>
+              <li>An inline flow distributes its content in lines (useful if you want to display some text).</li>
+              <li>A block flow renders each element on a new line (useful for separating the document in sections, like paragraphs).</li>
+            </ul>
+          </p>
+          <p>A block flow also permits a higher degree of control over the placement and size of the contained elements, which is why when creating the layout of a web page, most of the time you will interact with block elements.</p>
+          <p>The diagram below shows the difference between a block flow with 3 blocks and an inline flow with 3 inlines.</p>
+          <p><img class="img-responsive" src="../images/block-inline.png" alt="Block inline image"></p><br>
+
+          <p>While there are two important ways in which HTML elements are displayed, the display property can take several values, each with its own particularities. Let&#8217;s consider the elements with display:inline-block, for example. Not only they participate in an inline formatting context, but they also share some of the characteristics of block elements on the inside (width, height etc). <strong>Elements with display:inline-block act as inline on the outside and as a block in the inside.</strong> The particularities of inline-block elements are discussed in the section below.</p>
+
+          <p><strong>Breaking The Flow</strong></p>
+          <p>There are two important rules about the display property that children of HTML elements have:</p>
+          <ul>
+          <li>Children of an element are either all inline or all block.</li>
+          <li>Children of an inline element are all inline.</li>
+          </ul>
+          <p>However, if these rules are always followed, then you might ask yourself: <em>How come we can write stuff like a mix of inline (span) and block (div) elements as children of an inline element and they still get properly displayed?</em> The answer is anonymous blocks! HTML is very flexible, meaning that it allows all sort of weird constructs and does its best to make them work.</p>
+          <p>Let&#8217;s review the following example:</p>
+          <p><img class="img-responsive" src="../images/basic-box-model.png" alt="Basic box model image"></p><br>
+
+          <p>In this case, to help preserve the two constraints mentioned above, the browser creates 3 anonymous blocks (think of them as divs) that split the <strong>#inline-box</strong> span and its content. The first block contains the <strong>#inline-box</strong> span with the <strong>#first-inline-child</strong> span as the only child. The second block contains the <strong>#block-child</strong> div. The third block includes a continuation of the <strong>#inline-box</strong> span with the <strong>#second-inline-child</strong> span as the only child. With these anonymous blocks added, both constraints are met: each element has only inline or only block children and each inline element has only inline children. </p>
+          <p>The browser will interpret the above code in the following way:</p>
+          <p><img class="img-responsive" src="../images/box-model-1.png" alt="Basic box model image"></p><br>
+
+          <p>A keen eye would notice that the div is no longer contained by the <strong>#inline-box</strong> span. This might lead to some properties affecting the <strong>#inline-box</strong> span (such as background-color:red) behaving not exactly as expected.</p>
+          <p><img class="img-responsive" src="../images/box-model-2.png" alt="Basic box model image"></p><br>
+
+          <p>Breaking the flow can have unexpected consequences, so it is <strong>not recommended</strong>.</p>
+          <p>Want to learn more about this: CLICK the button below</p>
+
+          <p class="button" src="#" alt="Back to Home page"><a href="../index.html">Back to Home page&nbsp;&rsaquo;</a></p>
+
+          <p class="button" src="#" alt="Continue to Next page"><a href="block-inline.html">Continue to Next page&nbsp;&rsaquo;</a></p>
+          
+        </div>
+      </div>
+    </div>
+
+    
+
+
+
+  </body>
+</html>

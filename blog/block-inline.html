@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Slab:wght@200;300;400;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <meta name="description" content="A blog of Kittisan Puangkum, a web developer from Auckland, New Zealand." />
+  <link rel="stylesheet" href="../styles/main.css">
+
+  </head>
+  <!-- Header starts here -->
+      <header>
+            <div id="title-logo" class="row">
+              <div class="col-md-12 text-center">
+                <h1>Kittisan P.</h1>
+              </div>
+            </div>
+            <div id="title-blog" class="row">
+              <div class="col-md-12 text-center">
+                <h2>My Blog of learning!<br>
+                </h2>
+              </div>
+            </div>
+            <!-- Menu bar starts here -->
+            <div id="menu" class="row">
+              <nav class="col-md-12 text-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">TRAVEL BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">CONTACT ME</a>
+                    </li>
+                  </ul>
+             </nav>
+            </div><!-- Menu bar ends here -->
+         </header><!-- Header ends here -->
+  <body>
+
+    <!-- Container starts here -->
+    <div class="container-fluid">
+
+      <div id="container" class="row">
+
+        <div class="col-md-12 text-left">
+          <div class="col-md-12 text-left"><br><br>
+			<p><strong>Blocks, Inlines, And The Box Model</strong></p>
+			<p>Blocks and inlines are inherently different. It is not just a property that is toggled between these values; many other properties are affected by the display, the most important of which are probably those concerning the box model: width, height, padding, border, and margin. While they largely apply to both kinds of elements and have approximately the same meaning for both, the box model properties are calculated quite differently for inlines and blocks. </p>
+            <p>Here is the reference image from W3C regarding the box model:</p><br>
+            <p><img class="img-responsive" src="../images/box-model-3.png" alt="Box model image"></p><br>
+
+            <p>There are a few problematic properties (float and positioning) that further alter the computations of the width, height and margins, but they are not subject of this article. It is recommended that you simply assume there are no floats in the document and all elements have position:static.</p>
+			<p><strong>Replaced elements</strong> is yet another category of elements that might pose problems with regard to the box model. The content of such elements is replaced by an outside source and the rendering engine cannot decide their properties on its own. The three most common examples of replaced elements are img elements, iframes, and form elements. To give you a better idea, think of them as placeholders: when the document is rendered, these elements need outside help to be displayed. For example, instead of the img tag, the actual image resource is rendered. Replaced elements can be either inlines or blocks and they may or may not have intrinsic sizes (defined by the outside source &#8211; such as the width and the height of an image resource).</p>
+			<p>Here is how box model attributes are computed when they are set to <strong>auto</strong>:</p>
+			<ul>
+			<li>Padding and borders always default to 0.</li>
+			<li>Margins default to 0, except for block or replaced block elements with a specified width. In such a case, the left and right margins are equal so that the width, left and right margins, paddings, and border add up to the width containing box (please see below).</li>
+			<li>Te width and height of replaced elements are intrinsic values, possibly adjusted to preserve the ratio, if one of them is not auto.</li>
+			<li>The width and height of non-replaced elements are computed as explained below.</li>
+			</ul><br>
+			<p><img class="img-responsive" src="../images/box-model-4.png" alt="Box model image"></p><br>
+			<p>&nbsp;
+			*<strong>Available width</strong> is the value of the containing box width, minus the left and right paddings, borders, and margins. The containing box varies according to the position property. The containing box may be the content box of the parent (if the element is positioned static or relative), of the body (if positioned fixed), or of the closest ancestor with a position different than static (if positioned absolutely). This will be reiterated in a future article, when we&#8217;ll discuss about positioning.</p>
+			<p><strong>**</strong>If block elements have <a href="http://overflowvisible.com/" target="_blank" rel="nofollow">overflow:visible</a>, their height is computed as the distance between <strong>the top border edge of the first child and the bottom border edge of the last child</strong>.</p>
+			<p>Here is a short example to help you visualize the table above.</p>
+			<p><img class="img-responsive" src="../images/display2.png" alt="Box model image"></p><br>
+
+			<p>In all images, there is a green element with a blue and a pink child. The margins of each element are rendered with a lighter color. The width, height, and margins of the green element are set to auto, while the blue and pink elements have random non-0 values.</p>
+
+			<p class="button" src="#" alt="Back to Home page"><a href="../index.html">Back to Home page&nbsp;&rsaquo;</a></p>
+		
+			<p class="button" src="#" alt="Back to Previous page"><a href="sprint2-technical.html">Back to Previous page&nbsp;&rsaquo;</a></p>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+     
+
