@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>My Blog</title>
+  <title>Inline vs inline blocks</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Slab:wght@200;300;400;500&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -13,11 +13,13 @@
   <link rel="stylesheet" href="../styles/main.css">
 
   </head>
+
+  <body>
   <!-- Header starts here -->
       <header>
             <div id="title-logo" class="row">
               <div class="col-md-12 text-center">
-                <h1>Kittisan P.</h1>
+                <h1><a href="../index.html">Kittisan P.</a></h1>
               </div>
             </div>
             <div id="title-blog" class="row">
@@ -46,7 +48,6 @@
              </nav>
             </div><!-- Menu bar ends here -->
          </header><!-- Header ends here -->
-  <body>
 
     <!-- Container starts here -->
     <div class="container-fluid">
@@ -60,13 +61,13 @@
           <p><strong>Block Or Inline?</strong></p>
           <p>HTML elements can be displayed in two very distinct ways: inline or block. There are many differences between them, but the most important is that inlines flow one after another horizontally, until they have reached the end of the line, at which point they continue to flow on the next line. Blocks on the other hand flow one after the another vertically, and each of them basically occupies an entire line. HTML shows flexibility in allowing elements to flow and this is one of its benefits, as you can insert content in the page at any point and the entire page will rearrange itself to accommodate the changes.</p>
      
-          <p>The term flow, or formatting context, refers to the space occupied by inlines or blocks. Each formatting context is responsible for the rendition of its components and it does so according to the principles described above:
+          <p>The term flow, or formatting context, refers to the space occupied by inlines or blocks. Each formatting context is responsible for the rendition of its components and it does so according to the principles described above:</p>
         
             <ul>
               <li>An inline flow distributes its content in lines (useful if you want to display some text).</li>
               <li>A block flow renders each element on a new line (useful for separating the document in sections, like paragraphs).</li>
             </ul>
-          </p>
+          
           <p>A block flow also permits a higher degree of control over the placement and size of the contained elements, which is why when creating the layout of a web page, most of the time you will interact with block elements.</p>
           <p>The diagram below shows the difference between a block flow with 3 blocks and an inline flow with 3 inlines.</p>
           <p><img class="img-responsive" src="../images/block-inline.png" alt="Block inline image"></p><br>
@@ -91,19 +92,21 @@
           <p><img class="img-responsive" src="../images/box-model-2.png" alt="Basic box model image"></p><br>
 
           <p>Breaking the flow can have unexpected consequences, so it is <strong>not recommended</strong>.</p>
-          <p>Want to learn more about this: CLICK the button below</p>
+          <p>To learn more about this: CLICK the button below.</p><br>
 
-          <p class="button" src="#" alt="Back to Home page"><a href="../index.html">Back to Home page&nbsp;&rsaquo;</a></p>
+          <p class="button"><a href="../index.html">Back to Home page&nbsp;&rsaquo;</a></p>
 
-          <p class="button" src="#" alt="Continue to Next page"><a href="block-inline.html">Continue to Next page&nbsp;&rsaquo;</a></p>
+          <p class="button"><a href="block-inline.html">Continue to Next page&nbsp;&rsaquo;</a></p>
           
         </div>
       </div>
     </div>
 
-    
-
-
+    <footer class="footer">
+      <div class="col-md-12 text-right">
+          <!--<p class="copyright">© 2020 Kittisan P.</p> -->
+      </div>
+    </footer>
 
   </body>
 </html>

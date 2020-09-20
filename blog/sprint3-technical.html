@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>DOM, CSS and HTML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto+Slab:wght@200;300;400;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <meta name="description" content="Web developer from Auckland, New Zealand." />
+  <link rel="stylesheet" href="../styles/main.css">
+
+  </head>
+
+   <body>
+  <!-- Header starts here -->
+      <header>
+            <div id="title-logo" class="row">
+              <div class="col-md-12 text-center">
+                <h1><a href="../index.html">Kittisan P.</a></h1>
+              </div>
+            </div>
+            <div id="title-blog" class="row">
+              <div class="col-md-12 text-center">
+                <h2>My Blog of learning!<br>
+                </h2>
+              </div>
+            </div>
+            <!-- Menu bar starts here -->
+            <div id="menu" class="row">
+              <nav class="col-md-12 text-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">TRAVEL BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">CONTACT ME</a>
+                    </li>
+                  </ul>
+             </nav>
+            </div><!-- Menu bar ends here -->
+         </header><!-- Header ends here -->
+
+    <!-- Container starts here -->
+    <div class="container-fluid">
+
+      <div id="container" class="row">
+        <div class="col-md-12 text-left">
+          <h2 class="sprint"><span>Introduction to JavaScript</span></h2>
+
+          <h4>The differences between HTML and CSS</h4>
+          <p><strong>HTML (Hypertext Markup Language)</strong> is the structure and content of a page not the styling not the interactivity just the structure and content. HTML is used to create actual content of the page, such as written text.</p>
+
+          <p><strong>CSS (Cascade Styling Sheets)</strong> is responsible for the design or style of the website, including visual effects and background color.</p>
+
+          <p>The playground where lots of children are playing. This reminds me of the effects of HTML with CSS. The Playground is HTML and the Children are CSS. The playground has a lot of swings and objects to climb and a light house at the centre. With the children actively using the playground it resembles HTML with CSS. Late in the afternoon the playground looked empty. Like HTML without CSS. Children make the playground alive, fun and exiting to look at.</P>
+
+          <h4>Control flow and loops</h4>
+          <p>Loops is the repeating things. What if I wanted to print the numbers from 1 to 10</p>
+
+          <h4>The DOM</h4>
+          <p>HTML and CSS are two of the fundamental languages found almost everywhere on the web. The Document Object Model provides the means to interact with objects in an HTML document.</p>
+
+          <p>The DOM is the single most important piece of functionality for working with HTML documents. It provides the missing link that ties your HTML and CSS with JavaScript. It also provides access one level up to document and window objects.</p>
+          <P><img class="img-responsive" src="../images/dom-js.webp" alt="MOM JavaScript image"></P><br>
+          <p>Another way to visualize the document tree is as follows:<br>
+          The leaves are text nodes, and the arrows indicate parent-child relationships between nodes.</p>
+          <P><img class="img-responsive" src="../images/html-tree.svg" alt="MOM JavaScript image"></P>
+
+          <h4>The difference between accessing data from arrays and objects</h4>
+          <p><strong>Objects</strong> represent a special data type that is mutable and can be used to store a collection of data (rather than just a single value). Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.</p>
+          <p>
+              var cat = {<br>
+              "name": "Whiskers",<br>
+              "legs": 4,<br>
+              "tails": 1,<br>
+              "enemies": ["Water", "Dogs"]<br>
+             };
+          </p>
+          <p><strong>Arrays</strong> are a special type of variable that is also mutable and can also be used to store a list of values. With JavaScript array variables, we can store several pieces of data in one place using [ ].</p>
+          <p>
+            var sandwich = ["peanut butter", "jelly", "bread"]<br>
+          </p>
+
+          <h4>Functions</h4>
+          <p>Quite often we need to perform a similar action in many places of the script. For example, we need to show a nice-looking message when a visitor logs in, logs out and maybe somewhere else.</p>
+
+          <p>Functions are the main “building blocks” of the program. They allow the code to be called many times without repetition.</p>
+
+          <p>A function is a wrapper for some code. A function basically:</p>
+            <ul>
+              <li>Groups statements together</li>
+              <li>Makes your code reusable</li>
+            </ul>
+          
+          <p><strong>Below is an example of what a very simple function looks like:</strong></p>
+          <p>
+            function sayHello() {<br>
+              alert("hello!");<br>
+            }<br>
+          </p>
+
+          <p>Just having a function defined isn't enough, though. Our function needs to actually be called, and we can do that by adding the following line afterwards:</p>
+          <p>
+            function sayHello() {<br>
+              alert("hello!");<br>
+            }<br>
+            sayHello();<br>
+          </p><br>
+   
+
+          <p class="button"><a href="../index.html">Back to Home page&nbsp;&rsaquo;</a></p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="col-md-12 text-right">
+          <!--<p class="copyright">© 2020 Kittisan P.</p> -->
+      </div>
+    </footer>
+
+
+  </body>
+</html>
