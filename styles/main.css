@@ -84,7 +84,8 @@ ol {
 
 .sprint {
     color: #528BAE;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    
 }
 
 .col-6 {
@@ -124,10 +125,13 @@ li a:hover {
     text-decoration: none;
 }
 
+
 .button a:hover {
   display: inline-block;
   text-decoration: none;
   z-index: 20;
+  color: #333;
+
 }
 
 p {
@@ -181,3 +185,18 @@ li {
 /*.copyright {
     line-height: 32px;
 }*/
+
+.resource a {
+  font-size: 19px;
+  color: red;
+}
+
+.resource a:hover{
+  font-size: 19px;
+  color: #787878;
+}
+
+.resource a:active{
+  font-size: 19px;
+  color: #222;
+}
