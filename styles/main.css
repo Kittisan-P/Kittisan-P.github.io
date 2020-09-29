@@ -161,6 +161,12 @@ img {
     min-height: 382px;
 }
 
+.fizzbuzz-error span {
+    color: #f3273a;
+    /*background-color: #222;*/
+    padding: 8px 10px;
+}
+
 .footer {
     position: relative;
     z-index: 20;
